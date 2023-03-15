@@ -1,0 +1,137 @@
+body{
+    width: 1260px;
+    font-style: helvetica;
+    font-size: large;
+}
+
+li{
+    cursor: pointer;
+}
+
+/*ESTILO DEL NAV*/
+ul{
+    background-color: rgb(243, 193, 102);
+    padding-left: 10px;
+    height: 40px;
+    padding-top: 20px;
+}
+ul li{
+    display: inline;
+    margin-left: 90px;
+    font-weight: bold;
+}
+
+#reto{
+    text-decoration: underline;
+    color: blue;
+}
+
+
+/*ESTILO GENERAL DE LOS DIVS DEL MAIN*/
+
+
+/*Hay que tener en cuenta que la mayoría de los elementos tienen por defecto la propiedad box-sizing con el valor content-box.
+Esto quiere decir que el width que ponemos en el css corresponde solo al ancho del contenido lo cual no signid¡fica que 
+sea el ancho real del elemento, ya que a ese width hay que añadirle los valores de los bordes y los paddings laterales.
+En el caso del div que contiene el formulario si quisieramos que aumentara el padding izquierdo ("que el contenido se echara hacia la derecha")
+para no modificar su ancho real y no se agrandara, lo que sumasemos de padding se lo restariamos al width así se mantiene el ancho real del 
+elemento*/
+
+
+div#contenedor{
+    border: 2px solid black;
+    background-color: rgb(243, 157, 213);
+    padding: 10px;
+    width: 1236px;
+
+    /*Por lo tanto el width del contenido de este elemento son los 1260px del body menos 4px (2px por cada borde) y menos
+    20px (10px de padding a cada lado. Lo cual tiene un width de 1233px)*/
+}
+
+div#ol, div#formulario{
+    display: inline-block;
+    padding: 10px;
+}
+
+/*ESTILO DEL DIV CON LA VIÑETA*/
+div#ol{
+    width: 370px; /*29.8398472%*/
+    padding: 15px; /*15px*/
+    border: 2px solid black;
+    background-color: rgb(174, 235, 250);
+    font-size: x-large;
+
+    /*El ancho real de este div es la suma del width del contenido que son 370px más 30px (15px por cada lado)
+    más 4px (2px por cada lado). Por tanto nos sale el ancho real a 404px*/
+}
+
+div#ol img{
+    width: 370px;
+    height: 170px;
+    border-radius: 4px;
+    border: 2px solid gray;
+}
+
+div#ol ol li{
+    margin-top: 25px
+}
+
+#destacado{
+    color: orange;
+    text-decoration: underline;
+}
+
+/*ESTILO DEL DIV CON EL FORMULARIO*/
+div#formulario{
+    width: 765px;
+    padding-left: 45px;
+    padding-top: 20px;
+    padding-right: 15px;
+    border: 2px solid black;
+    background-color: rgb(136, 245, 160);
+
+    /*Vamos a calcular el ancho real de este div, que esta formado por 765px de width más 45px de padding izquierdo
+    más 15px de padding derecho y 4px (2px por cada borde lateral). El ancho real es de 829px*/
+}
+
+/*VEMOS QUE LA SUMA DE AMBOS ANCHOS REALES DE LOS DIV QUE ESTAN DENTRO DEL DIV (MAIN) COINCIDE CON EL WIDTH DEL DIV (MAIN)*/
+
+input#descripcion{
+    width: 400px;
+    height: 80px;
+}
+
+input#short{
+    width: 50px;
+    padding-left: 10px;
+
+    /*Este es el estilo aplicaod al input donde se guarda a quien va dirigido el reto y voy a calcular tambien su ancho.
+    Contamos con un width de 50px + un padding izquierdo de 10px lo cual sale un ancho de 60px, pero hay que añadirle 2px (1px que se le añade
+    por defecto a los inputs de borde) y 2px de padding derecho que tambien se aplica por defecto. Da un total de 64px.*/
+
+    /*Este de los tipos de inputs que usan la propiedad box-sizing: content-box. Pero algunos inputs como los submit o los selects traen por
+    defecto la propiedad box-sizing con el valor border-box esto significa que el el width en css es el ancho real del elemento y nosotros
+    podriamos añadirle los padding y los bordes como queramos y dejara el espacio sobrante al width del contenido.
+    Por ejemplo con border-box yo le diria width: 404px; padding: 15px y border: 2px entonces el elmento deja como width del contenido 
+    lo que falte hasta 404px lo que sería 370px*/
+}
+
+label.derecha{
+    margin-left: 40px;
+}
+
+.margen{
+    margin-left: 10px;
+}
+
+input.submit{
+    border-radius: 4px;
+    border: 2px solid green;
+    background-color: rgb(138, 245, 138);
+    font-weight: bold;
+}
+
+input#right{
+    float: right;
+}
+

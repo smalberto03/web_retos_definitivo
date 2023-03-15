@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WEB RETOS EN PORCENTAJES</title>
+</head>
+<body>
+  <!--NAV-->  
+  <nav>
+    <ul>
+        <li>Categorías</li>
+        <li id="reto">Retos</li>
+        <li>Alumnos</li>
+        <li>Equipos</li>
+    </ul>
+  </nav>
+  <!--MAIN-->
+  <main>
+    <div id="contenedor">
+        <img src="imagenes/imgmq.png" id="imgmq">
+        <div id="ol">
+            <img src="imagenes/escuela.jpeg">
+            <ol>
+                <li>Lista de retos</li>
+                <li id="destacado">Añadir un reto</li>
+                <li>Modificar un reto</li>
+                <li>Borrar retos</li>
+            </ol>
+        </div>
+        <div id="formulario">
+            <label>Nombre: <input type="text" placeholder="Carrera se sacos" class="margen"></label><br><br>
+            <label>Dirigido a: <input type="text" placeholder="2DAW" id="short" class="margen"></label><br><br><br>
+            <label>Descripcion: <br><br> <input type="textarea" placeholder="Puede no rellenarse" id="descripcion"></label></label><br><br><br>
+            <label>Fecha incio inscripcion: <input type="date" class="margen"></label> <label class="derecha">Fecha fin inscripcion <input type="date" placeholder="Puede no rellenarse" class="margen"></label><br><br>
+            <label>Fecha de inicio del reto: <input type="date" class="margen"></label> <label class="derecha">Fecha de fin del reto <input type="date" class="margen"></label><br><br>
+            <label>Profesor: </label>
+            <select name="select" class="margen">
+                <option value="value1">Paco</option>
+                <option value="value2" selected>Antonio</option>
+                <option value="value3">Carlos</option>
+            </select>
+            <label class="derecha">Categoria: </label>
+            <select name="select" class="margen">
+                <option value="value1">Juegos de mesa</option>
+                <option value="value2" selected>Juegos en equipo</option>
+            </select><br><br>
+            <input type="button" value="Cancelar" class="submit"> <input type="submit" value="Aceptar" class="submit" id="right">
+        </div>
+    </div>
+  </main>
+</body>
+</html>
